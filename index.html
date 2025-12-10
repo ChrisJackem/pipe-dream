@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe Dream</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+
+        <!-- <div id="output">Output</div> -->
+        
+        <div id="modal" class="hide">
+
+            <div id="confirm-modal" class="modal-inner">
+                <div class="modal-text">Text</div>
+                <button>Confirm</button>
+                <button class="reddish">Cancel</button>                
+            </div>
+
+            <div id="inform-modal" class="modal-inner">
+                <div class="modal-text">Text</div>
+                <button>Ok</button>
+            </div>
+
+            <div id="win-level-modal" class="modal-inner headed">
+                <div class="modal-text">
+                    <h2>Level Complete</h2>
+                    <p id="complete-text">You can now proceed.</p>
+                </div>
+                <button>Next Level</button>
+            </div> 
+
+            <div id="win-game-modal" class="modal-inner headed spin-head">
+                <div class="modal-text">
+                    <h2>You beat the game!</h2>
+                </div>
+                <button>Nice</button>
+            </div>
+
+            <!-- Level Edit -->
+            <div id="load-level-modal" class="modal-inner">
+                <div class="modal-text">
+                    <h2>load level</h2>
+                </div>
+                <div id="load-level-content" class="flex-row"></div>
+                <button id="load-level-cancel" class="reddish">Cancel</button>
+            </div>
+
+            <div id="new-level-modal" class="modal-inner">
+                <h2>new level</h2>
+                    <div class="input-container">
+                        <label>Name</label>
+                        <input aria-label='name input' class="input-input" type="text" data-prop="name">
+                    </div>
+                    <div class="input-container">
+                        <label>Text</label>
+                        <input aria-label="text input" class="input-input" type="text" data-prop="text">
+                    </div>
+                    <div class="input-container">
+                        <label>Text Win</label>
+                        <input aria-label="text win input" class="input-input" type="text" data-prop="text_win">
+                    </div>
+                    <div class="input-container-range">
+                        <p>Rows:</p>
+                        <label>3</label>
+                        <input aria-label="row slider" type="range" data-prop="rows" class="input-input" id="range-rows" min="3" max="10" value="3">
+                    </div>
+                    <div class="input-container-range">
+                        <p>Columns:</p>
+                        <label>3</label>
+                        <input aria-label="columns slider" type="range" data-prop="cols" class="input-input" id="range-cols" min="3" max="10" value="3">
+                    </div>                
+                    <button id="new-level-button" disabled>New</button>
+                    <button id="new-level-cancel" class="reddish">Cancel</button>                
+            </div>
+
+
+            <div id="help-modal" class="modal-inner">                
+                <h2>Help</h2>
+                <div class="help-div">
+                    <img src="./img/straight/straight.svg" class="modal-img">
+                    <p>Use pipes to connect the spigots to the tanks.
+                        <br/>
+                        <b>Click the pipes to rotate them, or click and drag to move.</b>                        
+                    </p>
+                </div>
+                <div class="help-div">
+                    <img src="./img/tap/tap.svg" class="modal-img">
+                    <p>The liquids start at a spigot. There can be multiple different colors.</p>
+                </div>
+                <div class="help-div">
+                    <img src="./img/help/tanks.png" class="modal-img">
+                    <p>You need to connect all the tanks to the corresponding liquid.</p>
+                </div>
+                <div class="help-div">
+                    <img src="./img/help/icons.PNG" class="modal-img">
+                    <p>The icons in the GUI indicate the colors of tanks you still need to connect.</p>
+                </div>
+                <button class="reddish">Close</button>
+            </div>
+        </div>
+
+        <div id="nav">
+            <img src="./img/GUI/logo_small.svg">
+        </div>
+        
+        <div id="side-bar">
+            <div id="side-bar-inner" class="sticky">
+                <div id="menu-menu" class="menu setup flex-column">
+                    <button id="play-btn">Play</button>
+                    <button id="select-btn">Level Select</button>
+                    <button id="editor-btn">Level Editor</button>
+                </div>             
+                <div id="select-menu" class="select setup flex-column">
+                    <button id="back-btn">Back to Menu</button>                    
+                </div>                           
+                <div id="edit-menu" class="edit setup flex-column">
+                    <button id="edit-new">New</button>                   
+                    <button id="edit-test" disabled>Test</button>                   
+                    <button id="edit-load">Load</button>                    
+                    <button id="edit-save" disabled>Save</button>                    
+                    <button id="edit-back" class="reddish">Quit</button>                    
+                </div>                           
+                <div id="game-menu" class="game setup"> 
+                    <div>
+                        <h2 id="level-title"></h2>
+                        <div id="level-text">Level Text</div>
+                    </div>              
+                    <div id="flow-swatches"></div>
+                    <div id="tile-info">Info</div>
+                    <button id="game-menu-main">Quit</button>
+                    <!-- <button id="reset">Reset Level</button> -->
+                </div>      
+                <button id="help-btn">Help</button>
+            </div>
+        </div>
+
+        <div id="board">
+            <div id="main-menu" class="menu setup">
+                <img id="logo" src="./img/GUI/logo_2.svg" width="100%" height="100%">
+            </div>
+            <div id="level-select-title" class="select setup">
+                <h1>Level Select</h1>
+                <p>Click a level to start playing</p>
+            </div>
+            <div id="level-select" class="select setup"></div>
+            <div id="level-editor" class="edit setup">
+                <div id="editor-grid"></div>
+                <div id="editor-side" class="sticky flex-column"></div>
+            </div>
+            <div id="board-content" class="game setup"></div>
+        </div>        
+
+        <div id="footer"><p>2024 CMJ</p></div>
+        <script type="module" src="./js/game.js"></script>
+    </div>
+</body>
+</html>

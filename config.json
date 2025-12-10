@@ -1,0 +1,309 @@
+{
+    "tile-types":{
+        "C_S": {
+            "name": "Cold Source Elbow",
+            "card_img": "tap",            
+            "moveable": false,
+            "source": "blue",
+            "rotatable": false,            
+            "io":[1,1,0,0]
+        },
+        "CSS": {
+            "name": "Cold Source Straight",
+            "card_img": "tap_straight",
+            "moveable": false,
+            "source": "blue",
+            "rotatable": false,
+            "io":[1,0,1,0]
+        },
+        "C_G":{
+            "name": "Cold Tank",
+            "badge": "img/drop.svg",
+            "badge_color": "blue",
+            "goal": "blue",
+            "card_img": "tank",
+            "i_rotate": 3,
+            "moveable": false,
+            "rotatable": false,          
+            "io":[0,0,0,1]
+        },
+        "CSG":{
+            "name": "Cold Tank Small",
+            "badge": "img/drop_small.svg",
+            "badge_color": "blue",
+            "goal": "blue",
+            "card_img": "tank_ball",
+            "i_rotate": 3,
+            "moveable": false,
+            "rotatable": false,          
+            "io":[0,0,0,1]
+        },
+        "CSA": {
+            "name": "Cold Source Alt",
+            "card_img": "tap_alt",
+            "tile_img":"img/tiles/white_tank.svg",          
+            "moveable": false,
+            "source": "blue",
+            "rotatable": true,            
+            "io":[0,0,1,0]
+        },        
+        "BLK": {
+            "name": "blank",
+            "blank": true            
+        },
+        "EBR": {
+            "name": "elbow right",          
+            "card_img": "elbow",            
+            "moveable": true,            
+            "io":[1,1,0,0]
+        },        
+        "STV": {            
+            "name": "straight pipe",
+            "card_img": "straight",
+            "moveable": true,
+            "io":[1,0,1,0]
+        },
+        "THW": {            
+            "name": "three way pipe",
+            "card_img": "three",
+            "moveable": true,
+            "io":[1,1,0,1]
+        },
+        "FRW": {
+            "name": "four way pipe",
+            "tile_img": "img/tiles/skull_tile.png",
+            "card_img": "four",
+            "moveable": true,
+            "io":[1,1,1,1]
+        }
+
+    },
+    "levels":[
+        {            
+            "name": "Orientation",
+            "text": "Fill the tanks with water.",
+            "text_win": "Thanks, I was getting thirsty.",
+            "bg-img": "img/tiles/dirt_block.png",
+            "tile_types": {                
+                "EBL": {
+                    "base": "EBR",
+                    "name": "elbow left",                 
+                    "i_rotate": 3,
+                    "io":[1,0,0,1]
+                }
+            },
+            "tiles":[
+                ["CSS", "EBR", "STV"],
+                ["EBL", "THW", "C_G"],
+                ["EBR", "FRW", "C_G"]
+            ]
+        },{
+            "name": "Tim's Trailer",
+            "text": "Old Tim ain't particular about his water, just make it work.",
+            "text_win": "He will be happy about the extra copper.",
+            "bg-img": "img/tiles/dirt_block.png",
+            "tiles": [
+              [ "lyu", "BLK", "BLK", "BLK", "BLK", "BLK" ],
+              [ "2ms", "BLK", "BLK", "BLK", "BLK", "C_G" ],
+              [ "BLK", "EBR", "EBR", "EBR", "EBR", "BLK" ],
+              [ "BLK", "EBR", "EBR", "EBR", "EBR", "bxx" ],
+              [ "BLK", "THW", "THW", "THW", "THW", "BLK" ],
+              [ "BLK", "EBR", "EBR", "EBR", "EBR", "BLK" ]
+            ],
+            "tile_types": {
+              "lyu": {
+                "io": [ 0, 1, 0, 1 ],
+                "i_rotate": 1,
+                "base": "CSS"
+              },
+              "2ms": {
+                "source": "red",
+                "io": [ 0, 1, 0, 1 ],
+                "i_rotate": 1,
+                "base": "CSS",
+                "key": "Hot Source Straight"
+              },
+              "bxx": {
+                "badge_color": "red",
+                "goal": "red",
+                "io": [ 0, 0, 0, 1 ],
+                "base": "C_G",
+                "key": "Hot Tank"
+              }
+            }            
+        },{
+            "name": "Hot Dog Party",
+            "text": "These guys are serious about condiments.",
+            "text_win": "I'll have one plain hot dog please.",
+            "bg-img": "img/tiles/dirt_block.png",
+            "tiles": [
+                [ "or0", "BLK", "d5n", "BLK", "5f5", "BLK" ],
+                [ "THW", "STV", "EBR", "STV", "EBR", "STV" ],
+                [ "EBR", "BLK", "STV", "BLK", "STV", "STV" ],
+                [ "BLK", "THW", "EBR", "STV", "EBR", "BLK" ],
+                [ "5q4", "5q4", "8hc", "8hc", "BLK", "z2o" ]
+            ],
+            "tile_types": {
+              "5q4": {
+                "name": "Ketchup Tank",
+                "badge_color": "red",
+                "goal": "red",
+                "i_rotate": 4,
+                "io": [ 1, 0, 0, 0 ],
+                "base": "C_G"
+              },
+              "or0": {
+                "name": "Ketchup Source",
+                "source": "red",
+                "io": [ 1, 1, 0, 0 ],
+                "base": "C_S"
+              },
+              "d5n": {
+                "name": "Mustard Source",
+                "source": "yellow",
+                "io": [ 1, 1, 0, 0 ],
+                "base": "C_S"
+              },
+              "5f5": {
+                "name": "Relish Source",
+                "source": "green",
+                "io": [ 1, 1, 0, 0 ],
+                "base": "C_S"
+              },
+              "8hc": {
+                "name": "Mustard Tank",
+                "badge": "img/drop.svg",
+                "badge_color": "yellow",
+                "goal": "yellow",
+                "card_img": "tank",
+                "io": [ 1, 0, 0, 0 ],
+                "i_rotate": 4,
+                "base": "C_G"
+              },
+              "z2o": {
+                "name": "Relish Tank",
+                "badge": "img/drop.svg",
+                "badge_color": "green",
+                "goal": "green",
+                "card_img": "tank",
+                "io": [ 1, 0, 0, 0 ],
+                "i_rotate": 4,
+                "base": "C_G"
+              }
+            }            
+          },
+          {
+            "name" : "Toxic Waste",
+            "text" : "Try not to breathe too much or get any on you.",
+            "text_win" : "Oh, make sure you wear these gloves.",
+            "bg-img" : "img/tiles/dirt_block.png",
+            "tiles" : [
+              ["STV", "STV", "STV", "THW", "STV", "STV", "CS_"],
+              ["STV", "EBR", "STV", "STV", "STV", "STV", "B_G"],
+              ["STV", "STV", "EBR", "FRW", "EBR", "EBR", "GGG"],
+              ["EBR", "STV", "CTS", "EBR", "CSG", "STV", "BLK"],
+              ["STV", "EBR", "BRN", "STV", "GRN", "EBR", "BLK"],
+              ["STV", "STV", "CTS", "EBR", "CSG", "EBR", "BLK"],
+              ["EBR", "STV", "STV", "EBR", "THW", "EBR", "BLK"]
+            ],
+            "tile_types" : {
+              "GGG" : {
+                "name" : "Chlorine Tank",
+                "badge_color" : "chartreuse",
+                "goal" : "chartreuse",
+                "io" : [0, 0, 0, 1],
+                "base" : "C_G"
+              },
+              "BRN" : {
+                "name" : "Phosgene Source",
+                "source" : "brown",
+                "io" : [0, 0, 1, 0],
+                "i_rotate" : 4,
+                "base" : "CSA"
+              },
+              "B_G" : {
+                "name" : "Phosgene Tank",
+                "badge_color" : "brown",
+                "goal" : "brown",
+                "io" : [0, 0, 0, 1],
+                "base" : "C_G"
+              },
+              "GRN" : {
+                "name" : "Chlorine Source",
+                "source" : "chartreuse",
+                "io" : [0, 0, 1, 0],
+                "base" : "CSA",
+                "i_rotate" : 4
+              },
+              "CTS" : {
+                "i_rotate" : 1,
+                "io" : [0, 1, 0, 0],
+                "base" : "CSG"
+              },
+              "CS_" : {
+                "io" : [0, 1, 0, 1],
+                "i_rotate" : 1,
+                "base" : "CSS"
+              }
+            }
+          },{
+            "bg-img" : "img/tiles/dirt_block.png",
+            "tiles" : [
+              ["hqk", "CSS", "qig", "EBR", "BLK", "qig", "io6", "hqk"],
+              ["EBR", "EBR", "EBR", "STV", "STV", "THW", "THW", "STV"],
+              ["STV", "STV", "EBR", "EBR", "STV", "EBR", "STV", "STV"],
+              ["EBR", "STV", "EBR", "17j", "i2a", "STV", "STV", "STV"],
+              ["STV", "STV", "STV", "CSG", "smz", "FRW", "STV", "STV"],
+              ["STV", "STV", "STV", "STV", "EBR", "STV", "STV", "STV"]              
+            ],
+            "tile_types" : {
+              "17j" : {
+                "name" : "235 Source",
+                "source" : "chartreuse",
+                "io" : [0, 0, 1, 0],
+                "base" : "CSA"
+              },
+              "smz" : {
+                "name" : "238 Source",
+                "source" : "darkgreen",
+                "io" : [0, 0, 1, 0],
+                "base" : "CSA"
+              },
+              "io6" : {
+                "name" : "Hot Source Straight",
+                "source" : "red",
+                "io" : [1, 0, 1, 0],
+                "base" : "CSS"
+              },
+              "qig" : {
+                "name" : "235 Tank Small",
+                "badge_color" : "chartreuse",
+                "goal" : "chartreuse",
+                "i_rotate" : 2,
+                "io" : [0, 0, 1, 0],
+                "base" : "CSG"
+              },
+              "i2a" : {
+                "name" : "HotTank Small",
+                "badge_color" : "red",
+                "goal" : "red",
+                "i_rotate" : 1,
+                "io" : [0, 1, 0, 0],
+                "base" : "CSG"
+              },
+              "hqk" : {
+                "name" : "238 Tank Small",
+                "badge_color" : "darkgreen",
+                "goal" : "darkgreen",
+                "i_rotate" : 2,
+                "io" : [0, 0, 1, 0],
+                "base" : "CSG"
+              }
+            },
+            "name" : "Mysterious Building",
+            "text" : "I like the blue light in this place.",
+            "text_win" : "Oh, you were supposed to wear this suit."
+          }
+          
+    ]
+}

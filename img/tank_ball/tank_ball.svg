@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 216 216">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        opacity: .5;
+      }
+
+      .cls-2 {
+        opacity: 0;
+      }
+
+      .cls-3 {
+        fill: aqua;
+        opacity: .24;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+        opacity: .67;
+      }
+
+      .cls-5 {
+        fill: #f7931e;
+      }
+
+      .cls-6 {
+        fill: lime;
+      }
+
+      .cls-7 {
+        fill: url(#radial-gradient);
+        opacity: .56;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="108" cy="108" fx="108" fy="108" r="81" gradientUnits="userSpaceOnUse">
+      <stop offset=".39" stop-color="#e6e6e6"/>
+      <stop offset=".47" stop-color="#dadada"/>
+      <stop offset=".61" stop-color="#bcbcbc"/>
+      <stop offset=".79" stop-color="#8b8b8b"/>
+      <stop offset="1" stop-color="#4d4d4d"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="-496.09" y1="-96.31" x2="-434.09" y2="-96.31" gradientTransform="translate(572.84 114.31)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#666"/>
+      <stop offset="0" stop-color="#6a6a6a"/>
+      <stop offset=".08" stop-color="#909090"/>
+      <stop offset=".16" stop-color="#afafaf"/>
+      <stop offset=".24" stop-color="#c7c7c7"/>
+      <stop offset=".32" stop-color="#d8d8d8"/>
+      <stop offset=".41" stop-color="#e2e2e2"/>
+      <stop offset=".52" stop-color="#e6e6e6"/>
+      <stop offset=".58" stop-color="#dadada"/>
+      <stop offset=".69" stop-color="#bcbcbc"/>
+      <stop offset=".84" stop-color="#8b8b8b"/>
+      <stop offset="1" stop-color="#4d4d4d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-219.04" y1="1.2" x2="-147.04" y2="1.2" gradientTransform="translate(291.04 12.3)" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="ball_tank">
+    <g>
+      <g class="cls-2">
+        <rect class="cls-6" width="216" height="216"/>
+      </g>
+      <circle class="cls-3" cx="108" cy="108" r="81"/>
+      <circle class="cls-7" cx="108" cy="108" r="81"/>
+      <g>
+        <path class="cls-5" d="M138.75,36V0h-62v36"/>
+        <path class="cls-1" d="M138.75,36V0h-62v36"/>
+      </g>
+      <g>
+        <rect class="cls-5" x="72" width="72" height="27" transform="translate(216 27) rotate(180)"/>
+        <rect class="cls-4" x="72" width="72" height="27" transform="translate(216 27) rotate(180)"/>
+      </g>
+    </g>
+  </g>
+</svg>
