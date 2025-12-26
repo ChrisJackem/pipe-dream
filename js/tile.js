@@ -120,7 +120,7 @@ export class Tile{
         this.adjacent = new Array(4).fill(null);
         this.card = null
         this._powered = data['source'] ? data['source'] : false
-        if (data.tile_img) div.style.setProperty('--bg-url', `url(${data.tile_img})`);
+        if (data.tile_img) div.style.setProperty('--bg-url', `url(../${data.tile_img})`);
     }
     get powered(){
         return this._powered;
