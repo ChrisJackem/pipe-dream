@@ -131,9 +131,9 @@ input[type=checkbox]{
 }
 
 /************************ LEVEL EDITOR ******************/
-#editor-grid{
+/* #editor-grid{ */
     /* padding: 0 1rem 0 0; */
-}
+/* } */
 #editor-side{
     max-height: 100vh;
     overflow: auto;    
@@ -145,6 +145,12 @@ input[type=checkbox]{
     grid-template-columns: 2fr 1fr;
     height: 100%;
     gap: 0.5rem;
+}
+@media screen and (max-width: 900px) {
+    #level-editor{
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+    }
 }
 
 /* .edit-panel{
@@ -259,6 +265,14 @@ input[type=checkbox]{
 #new-level-modal{
     width: clamp(200px, 90%, 600px);
 }
+    #new-level-modal > h2{
+        margin-bottom: 1rem;
+    }
+
+#load-level-cancel{
+    margin-top: 1rem;
+}
+
 
 .input-container{
     display: grid;
@@ -279,21 +293,32 @@ input[type=checkbox]{
 #level-select{
     display: flex;
     gap: 1.5rem;
-    flex-flow: row wrap;
+    flex-flow: column;
     font-size: 20px;
     padding: 1rem;
 }
-
+ 
 .level-select-level{
+    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;    
-    padding: 2rem;
+    padding: 1rem;
+    padding-left: 2.5rem;
     border: 2px solid #a0a0a0;
     background-color: #ededed;
     cursor: pointer;
+    max-width: 800px;
+    
 }
+/* .level-select-level > div:first-child{
+    padding: 0 auto;
+    position: absolute; top: 2rem; right: 2rem;
+} */
+
+
 .level-select-level p{
     font-size: 14px;
     width: 200px;
@@ -335,10 +360,15 @@ input[type=checkbox]{
 }
 button{
     display: block;
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: larger;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    background-color: #424242;
+    font-weight: 500;
 }
 
 .setup{
@@ -356,7 +386,9 @@ button{
     opacity: 1;
     background-color: rgba(0,0,0, 0.25);
     transition: all 500ms ease-out;
-
+}
+.modal.hide{
+    opacity: 0;
 }
 
 .modal-inner{
@@ -370,9 +402,17 @@ button{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #494949;
+    filter: drop-shadow( 2px 2px 20px #3a3a3a);
+    transition: all 200ms ease-out;
+    opacity: 1;
 }
+
     .modal-text{
-        margin-bottom: 0.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        font-size: larger;
     }
 
 #help-modal{

@@ -47,36 +47,37 @@
                 <div class="modal-text">
                     <h2>load level</h2>
                 </div>
-                <div id="load-level-content" class="flex-row"></div>
+                <div id="load-level-content" class="flex-column"></div>
                 <button id="load-level-cancel" class="reddish">Cancel</button>
             </div>
 
             <div id="new-level-modal" class="modal-inner">
-                <h2>new level</h2>
-                    <div class="input-container">
-                        <label>Name</label>
-                        <input aria-label='name input' class="input-input" type="text" data-prop="name">
-                    </div>
-                    <div class="input-container">
-                        <label>Text</label>
-                        <input aria-label="text input" class="input-input" type="text" data-prop="text">
-                    </div>
-                    <div class="input-container">
-                        <label>Text Win</label>
-                        <input aria-label="text win input" class="input-input" type="text" data-prop="text_win">
-                    </div>
-                    <div class="input-container-range">
-                        <p>Rows:</p>
-                        <label>3</label>
-                        <input aria-label="row slider" type="range" data-prop="rows" class="input-input" id="range-rows" min="3" max="10" value="3">
-                    </div>
-                    <div class="input-container-range">
-                        <p>Columns:</p>
-                        <label>3</label>
-                        <input aria-label="columns slider" type="range" data-prop="cols" class="input-input" id="range-cols" min="3" max="10" value="3">
-                    </div>                
-                    <button id="new-level-button" disabled>New</button>
-                    <button id="new-level-cancel" class="reddish">Cancel</button>                
+                <h2>New level</h2>                
+                <div class="input-container">
+                    <label>Name</label>
+                    <input aria-label='name input' class="input-input" type="text" data-prop="name">
+                </div>
+                <div class="input-container">
+                    <label>Text</label>
+                    <input aria-label="text input" class="input-input" type="text" data-prop="text">
+                </div>
+                <div class="input-container">
+                    <label>Text Win</label>
+                    <input aria-label="text win input" class="input-input" type="text" data-prop="text_win">
+                </div>
+                <div class="input-container-range">
+                    <p>Rows:</p>
+                    <label>3</label>
+                    <input aria-label="row slider" type="range" data-prop="rows" class="input-input" id="range-rows" min="3" max="10" value="3">
+                </div>
+                <div class="input-container-range">
+                    <p>Columns:</p>
+                    <label>3</label>
+                    <input aria-label="columns slider" type="range" data-prop="cols" class="input-input" id="range-cols" min="3" max="10" value="3">
+                </div>
+                <br/>           
+                <button id="new-level-button" disabled>Create New Level</button>
+                <button id="new-level-cancel" class="reddish">Cancel</button>                
             </div>
 
 
