@@ -11,7 +11,9 @@ A port of the old pipe game from fallout/arcades; move the pipes to control the 
 
 ## Technical
 
-config: config.json
+### Config
+**config.json**
+
 tile-types: These are the base card configs. 
 
     name: the name in the editor
@@ -26,4 +28,17 @@ These base types can have decendants which can overwrite these attributes making
 All tiles have thier own background and decal slots, as well as a slot for a card, which can live on a tile, which has it's own background and flow image.
 Valid cards MUST have thier own directory with a main background image and flow svg. This flow image will have its fill attribute manipulated by the engine.
 
+-------------
+### Event Master
+**event_master.js**
 
+All events are stored in a singleton class that all events pass through so we can suspend, remove and add them uniformly
+
+----------------
+
+## Colors
+**colors.js**
+
+This is the list of [useable] HTML colors. Custom levels can use any of these for flow colors
+
+----------------

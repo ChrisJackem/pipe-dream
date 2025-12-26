@@ -24,7 +24,7 @@ export class Game{
     constructor(){
         //this.output_panel = new OutputPanel()
         
-        // Logo - remove and replace to embed
+        // Logo - remove image and replace to embed
         AppendSvg(this.main_menu_container, this.logo.src)
         this.logo.remove()
 
@@ -41,10 +41,8 @@ export class Game{
             this.modal.CreateButtonModal('confirm-modal','Are you sure you want to quit the editor?', [
                 ()=>{
                     this.GameState('menu')
+                }, ()=>{
 
-                    //modal.HideModal() 
-                }, ()=>{  
-                    //modal.HideModal() 
                 }])
         });
 
@@ -64,8 +62,8 @@ export class Game{
         // Help 
         const btn_help = document.getElementById('help-btn')
         btn_help.addEventListener('click', ()=>{ 
-            this.modal.CreateButtonModal('help-modal','This is the text', [()=>{ 
-                //modal.HideModal() 
+            this.modal.CreateButtonModal('help-modal','This is the text', [()=>{
+
             }])
         })
         // Game quit menu
@@ -78,10 +76,10 @@ export class Game{
                     }else{
                         this.GameState('back-main') 
                     }
-                    //modal.HideModal() 
                 },
-                ()=>{  //modal.HideModal() 
-                    }])            
+                ()=>{
+                    
+                }])            
         })
 
         //////////////////////////////// Init - fetch config //////////////////////////////////////

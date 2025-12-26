@@ -222,8 +222,6 @@ input[type=checkbox]{
     height: 100%;
     aspect-ratio: 1/1;
     border: 1px solid black;
-    /* background-image: var(--bg-url);
-    transform: rotate(var(--rotation)); */
 }
 .editor-board-tile.active{
     border: 3px solid red;
@@ -588,6 +586,14 @@ button{
     background-color: var(--color-main);
     color: white;
     padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: black;
+    font-weight: 500;
+}
+#footer img{
+    height: 30px;
 }
 
 /*************** Mobile *************************/
