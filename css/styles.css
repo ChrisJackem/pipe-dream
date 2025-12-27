@@ -242,14 +242,19 @@ input[type=checkbox]{
     position: absolute;
 }
 .edit-nav{    
-    background-color: #525252;
-    color: white;
+    background-color: #525252;    
     display: flex;
     gap: 0.5rem;
     align-items: center;
     justify-content: right;
     padding: 0.5rem;
 }
+.edit-nav > *{
+    font-family: 'stencil';    
+    letter-spacing: 1px;
+    color: white;
+}
+
 .edit-panel-inner{
     padding: 0.5rem;
     background-color: #e2e2e2;
@@ -405,13 +410,13 @@ button:hover{
     position: absolute;      
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: rotate(-0.5deg) translate(-50%, -50%);
     padding: 2rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     border: 2px solid #494949;
     filter: drop-shadow( 2px 2px 20px #3a3a3a);
     transition: all 200ms ease-out;
@@ -421,7 +426,12 @@ button:hover{
     .modal-text{
         font-weight: bold;
         margin-bottom: 2rem;
-        font-size: larger;
+        font-size: 28px;
+        font-family: 'stencil';
+    }
+    .modal-text > h2{
+        font-family: 'stencil';
+        text-align: center;
     }
 
 #help-modal{
@@ -456,6 +466,10 @@ button:hover{
     "nav nav"
     "side board"
     "footer footer";
+    background-image:  url('../img/bg_tile.png');
+    background-image:  linear-gradient(rgba(255,255,255, 1), rgba(255,255,255, 0.1)), url('../img/bg_tile.png');
+    background-repeat: repeat;
+    background-size: auto;
 }
 
 #nav{
@@ -469,6 +483,7 @@ button:hover{
 }
 #nav img{
     height: 50px;
+    transform: rotate(-1deg);
 }
 
 /**************** side bar**************************/
@@ -517,6 +532,12 @@ button:hover{
     flex-direction: column;    
     gap: 1rem;
 }
+#level-title{
+    font-family: 'stencil';
+    font-weight: bold;
+    font-size: 30px;
+}
+
 #level-text{
     font-size: large;    
 }
