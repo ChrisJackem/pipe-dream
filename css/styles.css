@@ -11,6 +11,13 @@
     font-optical-sizing: auto;
 }
 
+@font-face {
+  font-family: 'stencil';
+  src: url('stencil.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 select{
     font-size: 18px;
 }
@@ -359,14 +366,15 @@ input[type=checkbox]{
 button{
     display: block;
     padding: 0.75rem;
-    font-size: larger;
+    font-size: 24px;
     font-weight: 500;
     cursor: pointer;
-    border-radius: 0.5rem;
-    border: none;
+    border-radius: 0.25rem;    
     color: white;
+    /* filter: drop-shadow(0px 0px 1px black); */
     background-color: #424242;
     font-weight: 500;
+    font-family: 'stencil';
 }
 
 .setup{
