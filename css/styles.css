@@ -365,16 +365,19 @@ input[type=checkbox]{
 }
 button{
     display: block;
-    padding: 0.75rem;
+    padding: 0.5rem;
     font-size: 24px;
     font-weight: 500;
     cursor: pointer;
     border-radius: 0.25rem;    
-    color: white;
+    color: var(--color-main);
     /* filter: drop-shadow(0px 0px 1px black); */
     background-color: #424242;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-family: 'stencil';
+}
+button:hover{
+    transform: scale(1.01) rotate(1deg);
 }
 
 .setup{
