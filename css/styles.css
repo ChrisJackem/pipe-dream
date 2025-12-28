@@ -467,16 +467,18 @@ button:hover{
     "side board"
     "footer footer";
     background-image:  url('../img/bg_tile.png');
-    background-image:  linear-gradient(rgba(255,255,255, 1), rgba(255,255,255, 0.1)), url('../img/bg_tile.png');
+    background-image:  linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0)), url('../img/bg_tile.png');
     background-repeat: repeat;
     background-size: auto;
 }
 
 #nav{
     grid-area: nav;
-    background: linear-gradient( var(--color-main-alt), var(--color-main), var(--color-main-alt) );
+    background-color: var(--color-main);
+    /* background-image: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.0));; */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0));;
     color: black;
-    border: 1px solid #909090;
+    border: 2px solid black;
     border-width: 0 0 2px 0;
     padding: 0.5rem;
     padding-bottom: 0.2rem;
@@ -613,19 +615,28 @@ button:hover{
     opacity: 0.45;
 }
 
+
 #footer{
     grid-area: footer;
     background-color: var(--color-main);
-    color: white;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.0));
+    color: black;
     padding: 0.5rem;
     display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    color: black;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 5px;
+    border-top: 2px solid black;
+    justify-content:space-between;
 }
+#footer, #footer > div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 #footer img{
-    height: 30px;
+    height: 24px;
 }
 
 /*************** Mobile *************************/
