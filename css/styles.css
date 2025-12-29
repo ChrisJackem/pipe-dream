@@ -74,6 +74,8 @@ input[type=checkbox]{
 #logo{
     max-width: 100%;
     height: min-content;
+    margin: 0 auto;
+    
 }
 
 #output{
@@ -339,6 +341,7 @@ input[type=checkbox]{
     font-size: 14px;
     width: 200px;
 }
+
 .fake-level{
     border: 2px solid black;
     display: grid;
@@ -388,7 +391,7 @@ button{
     font-family: 'stencil';
 }
 button:hover{
-    transform: scale(1.01) rotate(1deg);
+    transform: scale(1.03);
 }
 
 .setup{
@@ -416,7 +419,7 @@ button:hover{
     position: absolute;      
     top: 50%;
     left: 50%;
-    transform: rotate(-0.5deg) translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     padding: 2rem;
     background-color: white;
     display: flex;
@@ -433,10 +436,10 @@ button:hover{
         font-weight: bold;
         margin-bottom: 2rem;
         font-size: 28px;
-        font-family: 'stencil';
+        /* font-family: 'stencil'; */
     }
     .modal-text > h2{
-        font-family: 'stencil';
+        /* font-family: 'stencil'; */
         text-align: center;
     }
 
@@ -491,7 +494,7 @@ button:hover{
 }
 #nav img{
     height: 50px;
-    transform: rotate(-1deg);
+    
 }
 
 /**************** side bar**************************/
@@ -664,9 +667,12 @@ button:hover{
         width: 50px;
         height: 50px;
     }
+    .modal-inner{
+        width: 80%;
+    }
     button{
-        padding: 0.25rem;
-        font-size: 16px;
+        padding: 0.5rem;
+        font-size: 22px;
         font-weight: 500;
     }
     #board-content{
@@ -678,5 +684,10 @@ button:hover{
     }
     #level-select{
         flex-direction: column;
+    }
+    .level-select-level{
+        width: 100%;
+        flex-direction: column;
+        padding: 1.5rem;
     }
 }
