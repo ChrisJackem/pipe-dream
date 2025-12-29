@@ -70,6 +70,12 @@ input[type=checkbox]{
     fill: var(--logo-color);
 }
 
+
+#logo{
+    max-width: 100%;
+    height: min-content;
+}
+
 #output{
     position: fixed;
     bottom: 0px;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="1024" height="768" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768">
+<svg id="logo" width="1024" height="768" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768">
   <defs>
     <filter id="f" data-name="drop-shadow-1" x="-.61" y="-10.27" width="387" height="250" filterUnits="userSpaceOnUse">
       <feOffset dx="4.49" dy="4.49"/>
